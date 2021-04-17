@@ -27,8 +27,8 @@ module.exports = (app) => {
 
 
   // Task
-  app.post('/api/:projectId/task', tasks.create);
-  app.get('/api/:orgId/:projectId/task', tasks.list);
+  app.post('/api/task/:projectId', tasks.create);
+  app.get('/api/task/:orgId/:projectId', tasks.list);
   app.put('/api/:projectId/task', tasks.update);
   app.delete('/api/:projectId/task/:taskId', tasks.destroy);
 

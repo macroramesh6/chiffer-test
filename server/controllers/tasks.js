@@ -13,14 +13,14 @@ module.exports = {
   },
   list(req, res) {
     return Task.findAll({
-      include: [
-        {
-          model: Project,
-        },
-      ],
+      // include: [
+      //   {
+      //     model: Project,
+      //   },
+      // ],
       order: [
         ["createdAt", "DESC"],
-        [{ model: Project }, "createdAt", "ASC"],
+        // [{ model: Project }, "createdAt", "ASC"],
       ],
     })
       .then((todos) => res.status(200).send(todos))

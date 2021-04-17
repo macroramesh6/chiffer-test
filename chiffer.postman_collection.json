@@ -91,7 +91,7 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:8000/api/org/4",
+							"raw": "localhost:8000/api/org/1",
 							"host": [
 								"localhost"
 							],
@@ -99,7 +99,7 @@
 							"path": [
 								"api",
 								"org",
-								"4"
+								"1"
 							]
 						}
 					},
@@ -351,16 +351,15 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:8000/api/1/1/task",
+							"raw": "localhost:8000/api/task/1",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
-								"1",
-								"1",
-								"task"
+								"task",
+								"1"
 							]
 						}
 					},
@@ -385,16 +384,16 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:8000/api/1/1/task",
+							"raw": "localhost:8000/api/task/1/1",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
+								"task",
 								"1",
-								"1",
-								"task"
+								"1"
 							]
 						}
 					},

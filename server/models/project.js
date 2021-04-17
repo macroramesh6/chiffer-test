@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Project.associate = (models) => {
         Project.hasMany(models.Task, {
-          foreignKey: 'projectId',
+          foreignKey: 'taskId',
           // as: 'todoItems',
         });
       };
