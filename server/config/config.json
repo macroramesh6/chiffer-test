@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "waiyaki",
-    "password": null,
-    "database": "todos-dev",
+    "username": "postgres",
+    "password": "mysecretpassword",
+    "database": "postgres",
     "host": "127.0.0.1",
     "port": 5432,
     "dialect": "postgres"
