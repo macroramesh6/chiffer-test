@@ -1,5 +1,5 @@
-const todosController = require('../controllers').todos;
-const todoItemsController = require('../controllers').todoItems;
+// const todosController = require('../controllers').todos;
+// const todoItemsController = require('../controllers').todoItems;
 const userController = require('../controllers').users;
 const orgController = require('../controllers').organizations;
 const projects = require('../controllers').projects;
@@ -12,6 +12,9 @@ module.exports = (app) => {
   
   // Organization routes
   app.post('/api/org', orgController.create);
+  app.get('/api/orgs', orgController.list);
+  app.put('/api/org/:orgId', orgController.update);
+  app.delete('/api/org/:orgId', orgController.destroy);
   
   // User routes
   app.post('/api/:orgId/user', userController.create);
@@ -29,7 +32,7 @@ module.exports = (app) => {
   app.put('/api/:projectId/task', tasks.update);
   app.delete('/api/:projectId/task/:taskId', tasks.destroy);
 
-
+/*
   app.post('/api/todos', todosController.create);
   app.get('/api/todos', todosController.list);
   app.get('/api/todos/:todoId', todosController.retrieve);
@@ -44,4 +47,5 @@ module.exports = (app) => {
   app.all('/api/todos/:todoId/items', (req, res) => res.status(405).send({
     message: 'Method Not Allowed',
   }));
+  */
 };

@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
       },
     });
     Comments.associate = (models) => {
-      Comments.belongsTo(models.Project, {
+      Comments.belongsTo(models.Task, {
         foreignKey: 'taskId',
         onDelete: 'CASCADE',
       });
