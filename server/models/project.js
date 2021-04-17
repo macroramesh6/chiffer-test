@@ -5,5 +5,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
     });
+    Project.associate = (models) => {
+        Project.belongsTo(models.Organization, {
+          foreignKey: 'projectId',
+          onDelete: 'CASCADE',
+        });
+      };
     return Project;
 };

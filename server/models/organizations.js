@@ -6,8 +6,17 @@ module.exports = (sequelize, DataTypes) => {
       },
     });
 
+    // Org => User relationship
     Organization.associate = (models) => {
       Organization.hasMany(models.User, {
+        foreignKey: 'organizationId',
+        // as: 'todoItems',
+      });
+    };
+
+    // Org => Project relationship
+    Organization.associate = (models) => {
+      Organization.hasMany(models.Project, {
         foreignKey: 'organizationId',
         // as: 'todoItems',
       });
