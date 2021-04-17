@@ -18,10 +18,14 @@ module.exports = (app) => {
 
   // Projects
   app.post('/api/:orgId/project', projects.create);
+  app.get('/api/:orgId/projects', projects.list);
+  app.put('/api/project/:projectId', projects.update);
+  app.delete('/api/project/:projectId', projects.destroy);
+
 
   // Task
-  app.get('/api/:orgId/:projectId/task', tasks.list);
   app.post('/api/:projectId/task', tasks.create);
+  app.get('/api/:orgId/:projectId/task', tasks.list);
   app.put('/api/:projectId/task', tasks.update);
   app.delete('/api/:projectId/task/:taskId', tasks.destroy);
 
