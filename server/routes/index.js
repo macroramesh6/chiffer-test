@@ -3,6 +3,7 @@ const todoItemsController = require('../controllers').todoItems;
 const userController = require('../controllers').users;
 const orgController = require('../controllers').organizations;
 const projects = require('../controllers').projects;
+const tasks = require('../controllers').tasks;
 
 module.exports = (app) => {
   app.get('/api', (req, res) => res.status(200).send({
@@ -17,6 +18,9 @@ module.exports = (app) => {
 
   // Projects
   app.post('/api/:orgId/project', projects.create);
+
+  // Task
+  app.post('/api/:orgId/:projectId/task', tasks.create);
 
 
   app.post('/api/todos', todosController.create);

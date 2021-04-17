@@ -11,5 +11,12 @@ module.exports = (sequelize, DataTypes) => {
           onDelete: 'CASCADE',
         });
       };
+
+    Project.associate = (models) => {
+        Project.hasMany(models.Task, {
+          foreignKey: 'projectId',
+          // as: 'todoItems',
+        });
+      };
     return Project;
 };

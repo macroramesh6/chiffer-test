@@ -9,6 +9,12 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: false,
       }
     });
+    Task.associate = (models) => {
+      Task.belongsTo(models.Project, {
+        foreignKey: 'taskId',
+        onDelete: 'CASCADE',
+      });
+    };
     return Task;
   };
   
