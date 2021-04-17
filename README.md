@@ -11,6 +11,7 @@
 - [x] Schema field:commenting on tasks
 
 ### Nice to do: 
+- [ ] (New) AWS authentication
 - [ ] (New) Fix eager loading in organization
 - [ ] (Feature) Change password
 - [ ] (Bug) Check Sync issue
