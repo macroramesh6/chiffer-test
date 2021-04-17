@@ -13,5 +13,11 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
   });
+  User.associate = (models) => {
+    User.belongsTo(models.Organization, {
+      foreignKey: 'userId',
+      onDelete: 'CASCADE',
+    });
+  };
   return User;
 };

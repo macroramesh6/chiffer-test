@@ -5,6 +5,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
     });
+
+    Organization.associate = (models) => {
+      Organization.hasMany(models.User, {
+        foreignKey: 'organizationId',
+        // as: 'todoItems',
+      });
+    };
     return Organization;
   };
   

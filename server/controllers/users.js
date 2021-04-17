@@ -16,6 +16,7 @@ module.exports = {
     return User
       .create({
         email: req.body.email,
+        organizationId: req.params.orgId,
         password: passwordHash,
       })
       .then(User => res.status(201).send(User))
