@@ -20,7 +20,10 @@ module.exports = (app) => {
   app.post('/api/:orgId/project', projects.create);
 
   // Task
-  app.post('/api/:orgId/:projectId/task', tasks.create);
+  app.get('/api/:orgId/:projectId/task', tasks.list);
+  app.post('/api/:projectId/task', tasks.create);
+  app.put('/api/:projectId/task', tasks.update);
+  app.delete('/api/:projectId/task/:taskId', tasks.destroy);
 
 
   app.post('/api/todos', todosController.create);

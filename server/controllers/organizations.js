@@ -1,7 +1,7 @@
-const Organization = require('../models').Organization;
+const Organization = require("../models").Organization;
 
 module.exports = {
-    create(req, res) {
+  create(req, res) {
         return Organization
             .create({
                 name: req.body.name
